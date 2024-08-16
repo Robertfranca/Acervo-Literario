@@ -1,16 +1,19 @@
 package views;
 
 import java.awt.EventQueue;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TelaPrincipal {
 
-	private JFrame frame;
+	public JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -42,29 +45,39 @@ public class TelaPrincipal {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		
+		frame.getContentPane().setLayout(new GridBagLayout());
+
+		GridBagConstraints gbc = new GridBagConstraints();
+		gbc.insets = new Insets(10, 10, 10, 10);
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		gbc.gridwidth = 2;
+		gbc.anchor = GridBagConstraints.CENTER;
+
+
 		JLabel add_livro = new JLabel("Adicionar Livro");
-		add_livro.setBounds(69, 74, 73, 28);
-		frame.getContentPane().add(add_livro);
-		
+		frame.getContentPane().add(add_livro, gbc);
+
+		gbc.gridx = 2;
 		JLabel list_livros = new JLabel("Ver Livros");
-		list_livros.setBounds(290, 74, 73, 28);
-		frame.getContentPane().add(list_livros);
-		
+		frame.getContentPane().add(list_livros, gbc);
+
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		gbc.gridwidth = 1;
+
 		//Botao adicionar livro e seu listener e event.
 		JButton AdicionarLivro = new JButton("+");
 		AdicionarLivro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				CadastrarLivro cadastrarlivroobj = new CadastrarLivro (); 
-				cadastrarlivroobj.setVisible(true);  
+				CadastrarLivro cadastrarlivroobj = new CadastrarLivro();
+				cadastrarlivroobj.setVisible(true);
 			}
 		});
-		AdicionarLivro.setBounds(63, 113, 89, 69);
-		frame.getContentPane().add(AdicionarLivro);
-		
+		frame.getContentPane().add(AdicionarLivro, gbc);
+
+		gbc.gridx = 2;
 		JButton VerLivros = new JButton("=");
-		VerLivros.setBounds(273, 113, 89, 69);
-		frame.getContentPane().add(VerLivros);
+		frame.getContentPane().add(VerLivros, gbc);
 	}
 }

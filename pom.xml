@@ -5,4 +5,18 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>acervo-literario</name>
   <description>Sistema de biblioteca desenvolvido em Java utilizando o padrão MVC e Maven.</description>
+  <dependencies>
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>javax.persistence-api</artifactId>
+      <version>2.2</version>
+    </dependency>
+
+    <!-- Dependência do Hibernate (implementação do JPA) -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.4.32.Final</version>
+    </dependency>
+  </dependencies>
 </project>
