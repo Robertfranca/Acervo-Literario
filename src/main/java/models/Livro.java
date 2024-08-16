@@ -9,7 +9,7 @@ public class Livro {
     private String genero;
     //private String isbn;
 
-    //Construtor
+    //Construtor adicionar String isbn ao construtor quando nescessário
 
     public Livro(String titulo, String autor, String editora, int anoPublicacao, int numeroPaginas, String genero) {
         this.titulo = titulo;
