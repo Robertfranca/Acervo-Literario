@@ -1,7 +1,6 @@
 package views;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -10,61 +9,61 @@ import java.awt.event.ActionEvent;
 
 public class TelaPrincipal {
 
-	private JFrame frame;
+    private JFrame frmMenuInicial;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TelaPrincipal window = new TelaPrincipal();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+    /**
+     * Método principal para iniciar a aplicação.
+     */
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    TelaPrincipal window = new TelaPrincipal(); // Cria uma instância da TelaPrincipal
+                    window.frmMenuInicial.setVisible(true); // Torna a janela visível
+                } catch (Exception e) {
+                    e.printStackTrace(); // Imprime qualquer erro que ocorra
+                }
+            }
+        });
+    }
 
-	/**
-	 * Create the application.
-	 */
-	public TelaPrincipal() {
-		initialize();
-	}
+    /**
+     * Construtor da aplicação.
+     */
+    public TelaPrincipal() {
+        initialize(); // Chama o método para configurar a janela
+    }
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		
-		JLabel add_livro = new JLabel("Adicionar Livro");
-		add_livro.setBounds(69, 74, 73, 28);
-		frame.getContentPane().add(add_livro);
-		
-		JLabel list_livros = new JLabel("Ver Livros");
-		list_livros.setBounds(290, 74, 73, 28);
-		frame.getContentPane().add(list_livros);
-		
-		//Botao adicionar livro e seu listener e event.
-		JButton AdicionarLivro = new JButton("+");
-		AdicionarLivro.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				CadastrarLivro cadastrarlivroobj = new CadastrarLivro (); 
-				cadastrarlivroobj.setVisible(true);  
-			}
-		});
-		AdicionarLivro.setBounds(63, 113, 89, 69);
-		frame.getContentPane().add(AdicionarLivro);
-		
-		JButton VerLivros = new JButton("=");
-		VerLivros.setBounds(273, 113, 89, 69);
-		frame.getContentPane().add(VerLivros);
-	}
+    /**
+     * Configura o conteúdo da janela.
+     */
+    private void initialize() {
+        frmMenuInicial = new JFrame(); // Cria uma nova janela
+        frmMenuInicial.setTitle("Menu Inicial");
+        frmMenuInicial.setBounds(100, 100, 450, 300); // Define o tamanho e a posição da janela
+        frmMenuInicial.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Fecha a aplicação quando a janela é fechada
+        frmMenuInicial.getContentPane().setLayout(null);
+
+        // Cria e configura o botão para adicionar livros
+        JButton botaoAdicionarLivro = new JButton("Adicionar Livro");
+        botaoAdicionarLivro.setBounds(72, 100, 128, 82); // Posição e tamanho do botão
+        botaoAdicionarLivro.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                CadastrarLivro cadastrarLivro = new CadastrarLivro(); // Cria a instância da janela de cadastro
+                cadastrarLivro.setVisible(true); // Torna a nova janela visível
+            }
+        });
+        frmMenuInicial.getContentPane().add(botaoAdicionarLivro);
+
+        // Cria e configura o botão para ver livros
+        JButton VerLivros = new JButton("Ver Livros");
+        VerLivros.setBounds(245, 100, 128, 82);
+        VerLivros.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                MeusLivros meusLivros = new MeusLivros();
+                meusLivros.setVisible(true); // Exibe a tela 'Meus Livros'
+            }
+        });
+        frmMenuInicial.getContentPane().add(VerLivros);
+    }
 }
