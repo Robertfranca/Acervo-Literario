@@ -3,13 +3,24 @@ package views;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.awt.event.ActionEvent;
+import controller.ControladorUsuario;
+import models.Conexao;
 
+@SuppressWarnings("unused")
 public class CadastrarUsuario {
 
 	private JFrame frmCadastro;
@@ -19,9 +30,7 @@ public class CadastrarUsuario {
 	private JPasswordField senha;
 	private JPasswordField verificarSenha;
 
-	/**
-	 * Launch the application.
-	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -35,16 +44,11 @@ public class CadastrarUsuario {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
+
 	public CadastrarUsuario() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frmCadastro = new JFrame();
 		frmCadastro.setTitle("Cadastro");
@@ -107,9 +111,24 @@ public class CadastrarUsuario {
 		verificarSenha.setBounds(125, 177, 111, 20);
 		frmCadastro.getContentPane().add(verificarSenha);
 		
-		JButton cadastro = new JButton("Cadatrar");
-		cadastro.setFont(new Font("Arial", Font.PLAIN, 14));
-		cadastro.setBounds(167, 208, 95, 42);
-		frmCadastro.getContentPane().add(cadastro);
-	}
+		JButton btCadastro = new JButton("CADASTRAR");
+		btCadastro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Acesso exibir = new Acesso();
+				exibir.setVisible(true);
+				
+				setVisible(false);
+			}
+		});
+		btCadastro.setFont(new Font("Arial", Font.BOLD, 14));
+		btCadastro.setIcon(null);
+		btCadastro.setBounds(147, 208, 125, 30);
+		frmCadastro.getContentPane().add(btCadastro);
+		
+		
 }
+
+	protected void setVisible(boolean b) {
+		
+	}
+};

@@ -1,6 +1,6 @@
 package models;
 
- public class Usuario {
+public class Usuario {
     private String nome;
     private String email;
     private String cpf;
@@ -11,8 +11,7 @@ package models;
     this.email = email;
     this.cpf = cpf;
     this.senha = senha;
-  }
- }
+}
 
  public String getNome() {
     return nome;
@@ -28,4 +27,5 @@ public String getCpf() {
 
 public String getSenha() {
 	return senha;
+}
 }
