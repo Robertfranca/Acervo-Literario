@@ -1,27 +1,36 @@
 package models;
 
 public class Livro {
+	private int id;
     private String titulo;
     private String autor;
     private String editora;
-    private int anoPublicacao;
-    private int numeroPaginas;
-    private String genero;
-    //private String isbn;
+    private String status;
+    private int nota;
+    private String anotacao;
+    private String isbn;
 
     //Construtor
 
-    public Livro(String titulo, String autor, String editora, int anoPublicacao, int numeroPaginas, String genero) {
+    public Livro(int id, String titulo, String autor, String editora, String status, int nota, String anotacao, String isbn) {
+    	this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.editora = editora;
-        this.anoPublicacao = anoPublicacao;
-        this.numeroPaginas = numeroPaginas;
-        this.genero = genero;
-        //this.isbn = "";
+        this.status = status;
+        this.nota = nota;
+        this.anotacao = anotacao;
+        this.isbn = isbn;
     }
 
     //Getters e Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getTitulo() {
         return titulo;
     }
@@ -46,50 +55,52 @@ public class Livro {
         this.editora = editora;
     }
 
-    public int getAnoPublicacao() {
-        return anoPublicacao;
+    public String getStatus() {
+        return status;
     }
 
-    public void setAnoPublicacao(int anoPublicacao) {
-        this.anoPublicacao = anoPublicacao;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public int getNumeroPaginas() {
-        return numeroPaginas;
+    public int getNota() {
+        return nota;
     }
 
-    public void setNumeroPaginas(int numeroPaginas) {
-        this.numeroPaginas = numeroPaginas;
+    public void setNota(int nota) {
+        this.nota = nota;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getAnotacao() {
+        return anotacao;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setAnotacao(String anotacao) {
+        this.anotacao = anotacao;
     }
 
-//    public String getIsbn() {
-//        return isbn;
-//    }
-//
-//    public void SetIsbn(String isbn) {
-//        this.isbn = isbn;
-//    }
 
-    @Override
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    /*@Override
     public String toString() {
         return "Livro{" +
+        		"id='" + id + '\'' + 
                 "titulo='" + titulo + '\'' +
                 ", autor='" + autor + '\'' +
                 ", editora='" + editora + '\'' +
-                ", anoPublicacao=" + anoPublicacao +
-                ", numeroPaginas=" + numeroPaginas +
-                ", genero='" + genero + '\'' +
+                ", status=" + status +
+                ", nota=" + nota +
+                ", anotacao='" + anotacao + '\'' +
+                ", isbn='" + isbn + '\'' +
                 '}';
-    }
-
+    }*/
 
 
 }
