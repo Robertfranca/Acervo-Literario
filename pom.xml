@@ -5,4 +5,17 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>acervo-literario</name>
   <description>Sistema de biblioteca desenvolvido em Java utilizando o padrão MVC e Maven.</description>
+  <dependencies>
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>javax.persistence-api</artifactId>
+      <version>2.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.33</version>
+    </dependency>
+  </dependencies>
 </project>
