@@ -5,18 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c4758d3-e2ae-4e19-8f87-ee65019c6c8b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Livro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/views/CadastrarLivro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/views/TelaPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Acervo-Literario.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/api/GoogleBooksApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/views/CadastrarLivroISBN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/views/TipoDeCadastro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/ModelTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/RepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/Servicetest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/ViewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/controllers/LivroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/controllers/LivroController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/models/Livro.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/models/Livro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/repository/LivroRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/repository/LivroRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/repository/LivroRepositoryImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/repository/LivroRepositoryImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/repository/RepositoryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/repository/RepositoryException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivro$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivro$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivro$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivro$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivro.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivroISBN$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivroISBN$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivroISBN.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivroISBN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/MeusLivros$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/MeusLivros$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/MeusLivros$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/MeusLivros$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/MeusLivros$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/MeusLivros$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/MeusLivros.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/MeusLivros.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/TelaPrincipal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/TelaPrincipal$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/TelaPrincipal$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/TelaPrincipal$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/views/TelaPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/TelaPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ControladorUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LivroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Livro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LivroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LivroRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LivroRepositoryImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LivroRepositoryImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/views/CadastrarLivro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/CadastrarLivro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/views/CadastrarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/CadastrarUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/views/EditarLivro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/EditarLivro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/views/MeusLivros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/MeusLivros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/views/TelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/TelaPrincipal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,28 +68,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;experiment&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Giga/Documents/code/app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Application.MeusLivros.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Giga/Documents/code/Acervo-Literario",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="views" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Acervo-Literario" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18968.26" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18968.26" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.19072.14" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.19072.14" />
       </set>
     </attachedChunks>
   </component>
@@ -82,6 +123,7 @@
       <workItem from="1723555729890" duration="688000" />
       <workItem from="1723576628317" duration="1539000" />
       <workItem from="1723596668127" duration="1131000" />
+      <workItem from="1725002435341" duration="10304000" />
     </task>
     <servers />
   </component>

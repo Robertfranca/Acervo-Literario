@@ -45,6 +45,23 @@ public class LivroRepositoryImplement implements LivroRepository {
 
     }
 
+    public void cadastrarLivroPorIsbn(Livro  livro) throws  RepositoryException {
+        String sql = "INSERT INTO livro (titulo, autor, editora, status, nota, anotacao, isbn) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, livro.getTitulo());
+            stmt.setString(2, livro.getAutor());
+            stmt.setString(3, livro.getEditora());
+            stmt.setString(4, livro.getStatus());
+            stmt.setInt(5, livro.getNota());
+            stmt.setString(6, livro.getAnotacao());
+            stmt.setString(7, livro.getIsbn());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RepositoryException("Erro ao salvar livro por ISBN", e);
+        }
+    }
+
     public Livro buscarPorTitulo(String titulo) throws RepositoryException {
         String sql = "SELECT * FROM livro WHERE titulo = ?";
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);

@@ -1,11 +1,14 @@
 package views;
 
-import java.awt.Component;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-import javax.swing.JTable;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import cell.TableActionCellEditor;
@@ -13,30 +16,31 @@ import cell.TableActionCellRender;
 import cell.TableActionEvent;
 import controllers.LivroController;
 import models.Livro;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 
-
-public class MeusLivros extends javax.swing.JFrame {
+public class MeusLivros extends JFrame {
 
     private static final long serialVersionUID = 1L;
-	/**
+    /**
      * Creates new form MeusLivros
      */
     public MeusLivros() {
-    	try {
-    		LivroController controller = new LivroController();
-    		List<Livro> livros = controller.buscarLivros();
+        try {
+            LivroController controller = new LivroController();
+            List<Livro> livros = controller.buscarLivros();
             initComponents(livros);
-    	} catch (Exception e ) {
-    		
-    	}
+        } catch (Exception e ) {
+
+        }
         TableActionEvent event = new TableActionEvent() {
             @Override
             public void onEdit(int row) {
-            	DefaultTableModel model = (DefaultTableModel) table.getModel();
-            	int id = (int) model.getDataVector().elementAt(row).elementAt(0);
-            	EditarLivro editarLivro = new EditarLivro(id);
-            	editarLivro.setVisible(true);
+                DefaultTableModel model = (DefaultTableModel) table.getModel();
+                int id = (int) ((Vector) model.getDataVector().get(row)).get(0);
+                EditarLivro editarLivro = new EditarLivro(id);
+                editarLivro.setVisible(true);
             }
 
             @Override
@@ -44,27 +48,27 @@ public class MeusLivros extends javax.swing.JFrame {
                 if (table.isEditing()) {
                     table.getCellEditor().stopCellEditing();
                 }
-                
+
                 try {
-                	LivroController controller = new LivroController();
-                	DefaultTableModel model = (DefaultTableModel) table.getModel();
-                	int id = (int) model.getDataVector().elementAt(row).elementAt(0);
-                	controller.deletarLivro(id);
+                    LivroController controller = new LivroController();
+                    DefaultTableModel model = (DefaultTableModel) table.getModel();
+                    int id = (int) ((Vector) model.getDataVector().get(row)).get(0);
+                    controller.deletarLivro(id);
                     model.removeRow(row);
                 }
                 catch (Exception e ) {
-                	//eXCEPTION
+                    //eXCEPTION
                 }
-             
+
             }
 
             @Override
             public void onView(int row) {
                 //System.out.println("Detalhes : " + row);
-            	DefaultTableModel model = (DefaultTableModel) table.getModel();
-            	int id = (int) model.getDataVector().elementAt(row).elementAt(0);
-            	VerLivro verLivro = new VerLivro(id);
-            	verLivro.setVisible(true);
+                DefaultTableModel model = (DefaultTableModel) table.getModel();
+                int id = (int) ((Vector) model.getDataVector().get(row)).get(0);
+                VerLivro verLivro = new VerLivro(id);
+                verLivro.setVisible(true);
             }
         };
         table.getColumnModel().getColumn(3).setCellRenderer(new TableActionCellRender());
@@ -87,36 +91,40 @@ public class MeusLivros extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents(List<Livro> livros) {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
-       
+        jScrollPane1 = new JScrollPane();
+        table = new JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        
-Object[][] tableValues = new Object[livros.size()][4];
-        
+
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+        Object[][] tableValues = new Object[livros.size()][4];
+
         for(int i = 0; i< livros.size(); i++) {
-        	Livro livro = livros.get(i);
-        	int id  = livro.getId();
-        	String titulo = livro.getTitulo();
-        	String autor = livro.getAutor();
-        	tableValues[i][0] = id;
-        	tableValues[i][1] = titulo;
-        	tableValues[i][2] = autor;
-        	tableValues[i][3] = null;
+            Livro livro = livros.get(i);
+            int id  = livro.getId();
+            String titulo = livro.getTitulo();
+            String autor = livro.getAutor();
+            tableValues[i][0] = id;
+            tableValues[i][1] = titulo;
+            tableValues[i][2] = autor;
+            tableValues[i][3] = null;
         }
-        
+
         System.out.println(tableValues);
-        
-       
-        table.setModel(new javax.swing.table.DefaultTableModel(
-            tableValues,
-            new String [] {
-                "ID", "Título", "Autor", "Ação"
-            }
+
+
+        table.setModel(new DefaultTableModel(
+                tableValues,
+                new String [] {
+                        "ID", "Titulo", "Autor", "Acao"
+                }
         ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, true
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+			boolean[] canEdit = new boolean [] {
+                    false, false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -124,25 +132,44 @@ Object[][] tableValues = new Object[livros.size()][4];
             }
         });
         table.setRowHeight(40);
-        table.setSelectionBackground(new java.awt.Color(56, 138, 112));
+        table.setSelectionBackground(new Color(56, 138, 112));
         jScrollPane1.setViewportView(table);
+        
+        JButton botaoVoltar = new JButton("Voltar");
+        botaoVoltar.setFont(new Font("Tahoma", Font.BOLD, 13));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        botaoVoltar.setFont(new Font("Tahoma", Font.BOLD, 13));
+        botaoVoltar.setBounds(10, 10, 100, 30);
+        botaoVoltar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                TelaPrincipal telaPrincipal = new TelaPrincipal();
+                telaPrincipal.frame.setVisible(true);
+            }
+        });
+
+
+        GroupLayout layout = new GroupLayout(getContentPane());
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
-                .addContainerGap())
+        	layout.createParallelGroup(Alignment.TRAILING)
+        		.addGroup(layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        				.addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
+        				.addComponent(botaoVoltar))
+        			.addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
-                .addContainerGap())
+        	layout.createParallelGroup(Alignment.TRAILING)
+        		.addGroup(layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(botaoVoltar)
+        			.addPreferredGap(ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+        			.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 495, GroupLayout.PREFERRED_SIZE)
+        			.addContainerGap())
         );
+        getContentPane().setLayout(layout);
 
         pack();
         setLocationRelativeTo(null);
@@ -155,36 +182,38 @@ Object[][] tableValues = new Object[livros.size()][4];
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MeusLivros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(MeusLivros.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MeusLivros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(MeusLivros.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MeusLivros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MeusLivros.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(MeusLivros.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(MeusLivros.class.getName()).log(Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MeusLivros().setVisible(true);
             }
         });
     }
 
+    private  JButton botaoVoltar;;
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable table;
+    private JScrollPane jScrollPane1;
+    private JTable table;
     // End of variables declaration//GEN-END:variables
 }

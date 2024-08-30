@@ -65,78 +65,78 @@ public class EditarLivro extends JFrame {
         lblEditarLivro.setFont(new Font("Tahoma", Font.BOLD, 15));
         lblEditarLivro.setHorizontalAlignment(SwingConstants.CENTER);
         lblEditarLivro.setForeground(Color.BLACK);
-        lblEditarLivro.setBounds(138, 46, 141, 32); // Posição e tamanho do rótulo
+        lblEditarLivro.setBounds(320, 96, 141, 32); // Posição e tamanho do rótulo
         contentPane.add(lblEditarLivro);
 
         textFieldTitulo = new JTextField();
-        textFieldTitulo.setBounds(111, 95, 210, 20);
+        textFieldTitulo.setBounds(310, 218, 210, 20);
         contentPane.add(textFieldTitulo);
         textFieldTitulo.setColumns(10);
 
         textFieldAutor = new JTextField();
-        textFieldAutor.setBounds(111, 126, 210, 20);
+        textFieldAutor.setBounds(310, 249, 210, 20);
         contentPane.add(textFieldAutor);
         textFieldAutor.setColumns(10);
 
         textFieldEditora = new JTextField();
-        textFieldEditora.setBounds(111, 157, 210, 20);
+        textFieldEditora.setBounds(310, 280, 210, 20);
         contentPane.add(textFieldEditora);
         textFieldEditora.setColumns(10);
 
         textFieldStatus = new JTextField();
-        textFieldStatus.setBounds(111, 189, 210, 20);
+        textFieldStatus.setBounds(310, 312, 210, 20);
         contentPane.add(textFieldStatus);
         textFieldStatus.setColumns(10);
 
         textFieldNota = new JTextField();
-        textFieldNota.setBounds(111, 221, 210, 20);
+        textFieldNota.setBounds(310, 344, 210, 20);
         contentPane.add(textFieldNota);
         textFieldNota.setColumns(10);
 
         textFieldAnotacao = new JTextField();
-        textFieldAnotacao.setBounds(111, 253, 210, 20);
+        textFieldAnotacao.setBounds(310, 376, 210, 20);
         contentPane.add(textFieldAnotacao);
         textFieldAnotacao.setColumns(10);
 
         textFieldIsbn = new JTextField();
-        textFieldIsbn.setBounds(111, 285, 210, 20);
+        textFieldIsbn.setBounds(310, 408, 210, 20);
         contentPane.add(textFieldIsbn);
         textFieldIsbn.setColumns(10);
 
 
         JLabel lblTitulo = new JLabel("Título:");
         lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 14));
-        lblTitulo.setBounds(58, 94, 59, 14);
+        lblTitulo.setBounds(257, 217, 59, 14);
         contentPane.add(lblTitulo);
 
         JLabel lblAutor = new JLabel("Autor:");
         lblAutor.setFont(new Font("Tahoma", Font.BOLD, 14));
-        lblAutor.setBounds(58, 126, 57, 14);
+        lblAutor.setBounds(257, 249, 57, 14);
         contentPane.add(lblAutor);
 
         JLabel lblEditora = new JLabel("Editora:");
         lblEditora.setFont(new Font("Tahoma", Font.BOLD, 14));
-        lblEditora.setBounds(47, 157, 66, 14);
+        lblEditora.setBounds(246, 280, 66, 14);
         contentPane.add(lblEditora);
 
         JLabel lblStatus = new JLabel("Status:");
         lblStatus.setFont(new Font("Tahoma", Font.BOLD, 14));
-        lblStatus.setBounds(47, 189, 66, 14);
+        lblStatus.setBounds(246, 312, 66, 14);
         contentPane.add(lblStatus);
 
         JLabel lblNota = new JLabel("Nota:");
         lblNota.setFont(new Font("Tahoma", Font.BOLD, 14));
-        lblNota.setBounds(47, 221, 66, 14);
+        lblNota.setBounds(246, 344, 66, 14);
         contentPane.add(lblNota);
 
         JLabel lblAnotacao = new JLabel("Anotação:");
         lblAnotacao.setFont(new Font("Tahoma", Font.BOLD, 14));
-        lblAnotacao.setBounds(47, 253, 66, 14);
+        lblAnotacao.setBounds(246, 376, 66, 14);
         contentPane.add(lblAnotacao);
 
         JLabel lblIsbn = new JLabel("ISBN:");
         lblIsbn.setFont(new Font("Tahoma", Font.BOLD, 14));
-        lblIsbn.setBounds(47, 285, 66, 14);
+        lblIsbn.setBounds(246, 408, 66, 14);
         contentPane.add(lblIsbn);
 
         JButton BtnEditar = getBtnEditar();
@@ -144,7 +144,7 @@ public class EditarLivro extends JFrame {
         contentPane.add(BtnEditar);
 
         JButton botaoVoltar = new JButton("Voltar");
-        botaoVoltar.setFont(new Font("Tahoma", Font.BOLD, 11));
+        botaoVoltar.setFont(new Font("Tahoma", Font.BOLD, 12));
         botaoVoltar.setBounds(10, 10, 100, 30); // Posição e tamanho do botão
         botaoVoltar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -175,7 +175,7 @@ public class EditarLivro extends JFrame {
 
         JButton btnEditar = new JButton("Editar");
         btnEditar.setFont(new Font("Tahoma", Font.BOLD, 13));
-        btnEditar.setBounds(156, 320, 110, 32);
+        btnEditar.setBounds(355, 443, 110, 32);
         btnEditar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

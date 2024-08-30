@@ -1,70 +1,77 @@
 package views;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class TelaPrincipal {
+public class TelaPrincipal extends JFrame {
 
-	private JFrame frame;
+	private static final long serialVersionUID = 1L;
+	public JFrame frame; // Agora, o JFrame está acessível para ser chamado de uma classe externa
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					TelaPrincipal window = new TelaPrincipal();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
-	 * Create the application.
+	 * Construtor da aplicação.
 	 */
 	public TelaPrincipal() {
 		initialize();
-	}
+	} // Inicializa a interface gráfica
 
 	/**
-	 * Initialize the contents of the frame.
+	 * Inicializa o conteúdo da janela.
 	 */
+
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		
-		JLabel add_livro = new JLabel("Adicionar Livro");
-		add_livro.setBounds(69, 74, 73, 28);
-		frame.getContentPane().add(add_livro);
-		
-		JLabel list_livros = new JLabel("Ver Livros");
-		list_livros.setBounds(290, 74, 73, 28);
-		frame.getContentPane().add(list_livros);
-		
-		//Botao adicionar livro e seu listener e event.
-		JButton AdicionarLivro = new JButton("+");
-		AdicionarLivro.addActionListener(new ActionListener() {
+		frame = new JFrame(); // Cria a nova janela
+		frame.setTitle("Menu Inicial");
+		frame.setBounds(500, 100, 800, 800); // Define o tamanho e a posição da janela
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Fecha a aplicação quando a janela é fechada
+		frame.getContentPane().setLayout(null); // Usa layout absoluto (null layout)
+
+		// Cria e configura o botão para adicionar livros
+		JButton botaoAdicionarLivro = new JButton("Adicionar Livro");
+		botaoAdicionarLivro.setFont(new Font("Tahoma", Font.BOLD, 12));
+		botaoAdicionarLivro.setBounds(151, 296, 186, 140); // Posição e tamanho do botão
+		botaoAdicionarLivro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				CadastrarLivro cadastrarlivroobj = new CadastrarLivro (); 
-				cadastrarlivroobj.setVisible(true);  
+				TipoDeCadastro tipoDeCadastro = new TipoDeCadastro(TelaPrincipal.this); // Cria a instância da janela de cadastro
+				tipoDeCadastro.setVisible(true); // Torna a nova janela visível
+				frame.setVisible(false); // Torna a janela atual invisível
 			}
 		});
-		AdicionarLivro.setBounds(63, 113, 89, 69);
-		frame.getContentPane().add(AdicionarLivro);
-		
-		JButton VerLivros = new JButton("=");
-		VerLivros.setBounds(273, 113, 89, 69);
-		frame.getContentPane().add(VerLivros);
+		frame.getContentPane().add(botaoAdicionarLivro);
+
+		// REMOVI TRY CATCH POR CAUSA DE UM ERRO!!!
+		JButton botaoVerLivros = new JButton("Ver Livros");
+		botaoVerLivros.setFont(new Font("Tahoma", Font.BOLD, 12));
+		botaoVerLivros.setBounds(436, 296, 186, 140); // Posição e tamanho do botão
+		botaoVerLivros.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MeusLivros meusLivros = new MeusLivros(); // Cria a instância da janela 'Meus Livros'
+//                meusLivros = new MeusLivros();
+				meusLivros.setVisible(true); // Exibe a janela 'Meus Livros'
+				frame.setVisible(false); // Torna a janela atual invisível
+			}
+		});
+		frame.getContentPane().add(botaoVerLivros);
+
+		JLabel lblMenuInicial = new JLabel("Menu Inicial");
+		lblMenuInicial.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMenuInicial.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblMenuInicial.setBounds(327, 82, 120, 39);
+		frame.getContentPane().add(lblMenuInicial);
+
+//		JButton btnMeusLivros = new JButton("MeusLivrose\r\n");
+//		btnMeusLivros.setBounds(172, 227, 89, 23);
+//		btnMeusLivros.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				/*LivroController livroController = new LivroController();
+//				Livro info = livroController.buscarLivroInfo(8);
+//				System.out.println(info.getNota());
+//				livroController.deletarLivro(info.getId());*/
+//			}
+//		});
+//		frame.getContentPane().add(btnMeusLivros);
 	}
 }
