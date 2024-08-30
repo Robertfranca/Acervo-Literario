@@ -33,7 +33,6 @@ public class MeusLivros extends javax.swing.JFrame {
         TableActionEvent event = new TableActionEvent() {
             @Override
             public void onEdit(int row) {
-                //System.out.println("Editar : " + row);
             	DefaultTableModel model = (DefaultTableModel) table.getModel();
             	int id = (int) model.getDataVector().elementAt(row).elementAt(0);
             	EditarLivro editarLivro = new EditarLivro(id);
@@ -61,7 +60,11 @@ public class MeusLivros extends javax.swing.JFrame {
 
             @Override
             public void onView(int row) {
-                System.out.println("Detalhes : " + row);
+                //System.out.println("Detalhes : " + row);
+            	DefaultTableModel model = (DefaultTableModel) table.getModel();
+            	int id = (int) model.getDataVector().elementAt(row).elementAt(0);
+            	VerLivro verLivro = new VerLivro(id);
+            	verLivro.setVisible(true);
             }
         };
         table.getColumnModel().getColumn(3).setCellRenderer(new TableActionCellRender());
@@ -88,7 +91,7 @@ public class MeusLivros extends javax.swing.JFrame {
         table = new javax.swing.JTable();
        
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         
 Object[][] tableValues = new Object[livros.size()][4];
         
