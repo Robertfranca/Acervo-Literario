@@ -161,7 +161,7 @@ public class EditarLivro extends JFrame {
 		    textFieldStatus.setText(info.getStatus());
 		    textFieldNota.setText(((Integer) info.getNota()).toString());
 		    textFieldAnotacao.setText(info.getAnotacao());
-		    
+		    textFieldIsbn.setText(info.getIsbn());
 			
 			info.getAutor();
 		} catch (RepositoryException e) {
@@ -198,14 +198,17 @@ public class EditarLivro extends JFrame {
 
                 String mensagem = null;
                 try {
-                   livroController.editarLivro(livroAtualizado);
+                   mensagem = livroController.MensagemEditarLivro(titulo, autor, editora, status, nota, anotacao, isbn);
+                   if (mensagem.equals("Livro editado com sucesso!")) {
+                	   livroController.editarLivro(livroAtualizado);
+                   }
                 } catch (RepositoryException ex) {
                     throw new RuntimeException(ex);
                 }
-                System.out.println(mensagem);
+                
 
                 JOptionPane.showMessageDialog(null, mensagem);
-                if(mensagem.equals("Livro Editado com sucesso!")) {
+                if(mensagem.equals("Livro editado com sucesso!")) {
                 	textFieldTitulo.setText("");
                     textFieldAutor.setText("");
                     textFieldEditora.setText("");
