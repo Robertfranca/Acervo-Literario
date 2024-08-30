@@ -15,12 +15,12 @@ public class LivroRepositoryImplement implements LivroRepository {
     public void testConnection() throws RepositoryException{
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
             if (conn != null) {
-                System.out.println("Connection to the database was successful!");
+                System.out.println("Connection to the database.sql was successful!");
             } else {
                 System.out.println("Failed to make connection!");
             }
         } catch (SQLException e) {
-            System.out.println("An error occurred while connecting to the database:");
+            System.out.println("An error occurred while connecting to the database.sql:");
             e.printStackTrace();
         }
     }

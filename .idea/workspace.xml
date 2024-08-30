@@ -5,42 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c4758d3-e2ae-4e19-8f87-ee65019c6c8b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bin/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/GoogleBooksApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/views/CadastrarLivroISBN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/views/TipoDeCadastro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/database/database.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/controllers/LivroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/controllers/LivroController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/models/Livro.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/models/Livro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/repository/LivroRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/repository/LivroRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/repository/LivroRepositoryImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/repository/LivroRepositoryImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/repository/RepositoryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/repository/RepositoryException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivro$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivro$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivro$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivro$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivro.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivroISBN$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivroISBN$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/CadastrarLivroISBN.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/CadastrarLivroISBN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/MeusLivros$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/MeusLivros$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/MeusLivros$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/MeusLivros$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/MeusLivros$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/MeusLivros$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/MeusLivros.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/MeusLivros.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/TelaPrincipal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/TelaPrincipal$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/TelaPrincipal$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/TelaPrincipal$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/views/TelaPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/views/TelaPrincipal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ControladorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ControladorUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LivroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Livro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/LivroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LivroRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/LivroRepositoryImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/LivroRepositoryImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/CadastrarLivro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/CadastrarLivro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/CadastrarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/CadastrarUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/EditarLivro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/EditarLivro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/MeusLivros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/MeusLivros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/views/TelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/views/TelaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database/databasetest" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/databasetest" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +54,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -123,7 +96,7 @@
       <workItem from="1723555729890" duration="688000" />
       <workItem from="1723576628317" duration="1539000" />
       <workItem from="1723596668127" duration="1131000" />
-      <workItem from="1725002435341" duration="10304000" />
+      <workItem from="1725002435341" duration="11672000" />
     </task>
     <servers />
   </component>

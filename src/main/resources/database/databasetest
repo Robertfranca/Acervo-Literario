@@ -1,0 +1,33 @@
+USE biblioteca;
+
+-- SELECT * FROM livro;
+
+CREATE TABLE IF NOT EXISTS livro (
+  id bigint unsigned NOT NULL AUTO_INCREMENT,
+  titulo varchar(500) NOT NULL,
+  autor varchar(500) NOT NULL,
+  editora varchar(500) NOT NULL,
+  status varchar(20) DEFAULT 'não lido',
+  nota int DEFAULT NULL,
+  anotacao text,
+  isbn varchar(500) DEFAULT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY id (id)
+)
+ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO livro (Titulo, autor, editora, status, nota, anotacao, isbn)
+VALUES
+  ('O Senhor dos Anéis', 'J.R.R. Tolkien', 'Martins Fontes', 'Lido', 5, 'Uma obra-prima da fantasia épica.', '9788533632342'),
+  ('1984', 'George Orwell', 'Editora Globo', 'Lendo', 4, 'Um clássico da distopia.', '9788525040336'),
+  ('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 'Editora Sextante', 'Lido', 5, 'Uma história atemporal sobre amizade.', '9788575422061'),
+  ('O Nome do Vento', 'Patrick Rothfuss', 'Suma de Letras', 'Lendo', 4.5, 'Uma fantasia épica com um protagonista cativante.', '9788575424257'),
+  ('Orgulho e Preconceito', 'Jane Austen', 'Editora Ática', 'Lido', 4, 'Um romance clássico sobre amor e sociedade.', '9788508098656'),
+  ('O Alquimista', 'Paulo Coelho', 'Editora Sextante', 'Lido', 4, 'Uma jornada em busca do sonho.', '9788575420295'),
+  ('Dom Casmurro', 'Machado de Assis', 'Editora Ática', 'Lendo', 3.5, 'Um clássico da literatura brasileira.', '9788508098663'),
+  ('A Metamorfose', 'Franz Kafka', 'Editora Penguin-Companhia', 'Lido', 5, 'Uma história surreal e perturbadora.', '9788576895014'),
+  ('O Hobbit', 'J.R.R. Tolkien', 'Martins Fontes', 'Lido', 4.5, 'Uma aventura épica antes da trilogia do Senhor dos Anéis.', '9788533632328'),
+  ('Cem Anos de Solidão', 'Gabriel García Márquez', 'Companhia das Letras', 'Lendo', 4, 'Um clássico da literatura latino-americana.', '9788535907410');
+
+
+ SELECT * FROM livro;
