@@ -26,12 +26,12 @@ public class LivroController {
         isbn = limparDados(isbn);
 
     // Validar e converter ISBN
-    int isbnInt;
+    /*int isbnInt;
     try {
         isbnInt = validarEConverterISBN(isbn);
     } catch (NumberFormatException e) {
         return "O ISBN deve conter apenas números.";
-    }
+    }*/
 
         
         if (titulo.isEmpty() || autor.isEmpty() || editora.isEmpty() || status.isEmpty() || anotacao.isEmpty() || isbn.isEmpty()) {
@@ -49,12 +49,50 @@ public class LivroController {
         } else if (nota < 0 || nota > 10) {
                 return "Avacalhou! As notas vão de 0 até 10.";
         } else {
-            Livro novoLivro = new Livro(0,titulo, autor, editora, status, nota, anotacao, String.valueOf(isbnInt));
+            Livro novoLivro = new Livro(0,titulo, autor, editora, status, nota, anotacao, isbn);
             livroRepository.salvar(novoLivro);
             return "Livro cadastrado com sucesso!";
         }
     }
 
+    public String MensagemEditarLivro(String titulo, String autor, String editora, String status, int nota, String anotacao, String isbn) throws RepositoryException {
+        // Limpar os dados
+        titulo = limparDados(titulo);
+        autor = limparDados(autor);
+        editora = limparDados(editora);
+        status = limparDados(status);
+        anotacao = limparDados(anotacao);
+        isbn = limparDados(isbn);
+
+    // Validar e converter ISBN
+   /* int isbnInt;
+    try {
+        isbnInt = validarEConverterISBN(isbn);
+    } catch (NumberFormatException e) {
+        return "O ISBN deve conter apenas números.";
+    }*/
+
+        
+        if (titulo.isEmpty() || autor.isEmpty() || editora.isEmpty() || status.isEmpty() || anotacao.isEmpty()) {
+            return "Preencha corretamente.";
+        } else if (titulo.length() > 500) {
+            return "O título excede o limite de 500 caracteres.";
+        } else if (autor.length() > 500) {
+            return "O autor excede o limite de 500 caracteres.";
+        } else if (editora.length() > 500) {
+            return "A editora excede o limite de 500 caracteres.";
+        } else if (status.length() > 20) {
+            return "O status excede o limite de 20 caracteres.";
+        } else if (isbn.length() > 15) {
+            return "O ISBN excede o limite de 15 caracteres."; 
+        } else if (nota < 0 || nota > 10) {
+                return "Avacalhou! As notas vão de 0 até 10.";
+        } else {
+            
+            return "Livro editado com sucesso!";
+        }
+	}
+    
     private int validarEConverterISBN(String isbn) throws NumberFormatException {
         return Integer.parseInt(isbn.replaceAll("[^0-9]", ""));
     }
